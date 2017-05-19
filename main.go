@@ -93,7 +93,7 @@ func main() {
 
 	for _, fileDiff := range fileDiffs {
 		fileName := fileDiff.NewName
-		hunks := fileDiff.Hunks
+		hunks := fileDiff.GetHunks()
 
 		for _, hunk := range hunks {
 			go func(hunk *diff.Hunk) {
